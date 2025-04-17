@@ -41,9 +41,25 @@
   color: #888;
 }
 
-.outer{
+/* .outer{
   border: 1px solid white;
   width: 400px;
   border-radius: 15px;
   overflow: hidden;
+} */
+
+.outer {
+  width: 400px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
 }
+
+.inner {
+  height: 100%;
+  line-height: 30px;
+  border-radius: 8px;
+}
+
