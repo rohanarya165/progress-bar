@@ -1,32 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
 
 function Progress({ progress }) {
-  const [animationProgress, setAnimationProgress] = useState(0)
-
-  useEffect(() => {
-    // Animate to new progress value on every change
-    const timeout = setTimeout(() => {
-      setAnimationProgress(progress)
-    }, 0) // slight delay for smoother animation
-
-    return () => clearTimeout(timeout)
-  }, [progress])
-
   return (
-    <div className='outer'>
-      <div
-        className='inner'
-        style={{
-          backgroundColor: "green",
-          width: `${animationProgress}%`,
-          transition: 'width 0.5s ease-in-out',
-          color: 'white',
-          textAlign: 'center',
-          padding: '4px 0'
-        }}
-      >
-        {progress}%
+    <div>
+      <div className="outer">
+        <div
+          className="inner"
+          style={{
+            backgroundColor: "green",
+            width: `${progress}%`,
+            transition: "width 0.5s ease-in-out",
+            textAlign: "center",
+            padding: "4px 0",
+          }}
+        ></div>
       </div>
+      <p style={{ color: "green" }}>{progress}%</p>
     </div>
   );
 }
